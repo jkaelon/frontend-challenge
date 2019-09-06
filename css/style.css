@@ -6,15 +6,18 @@
 
 body {
   background-color: #333;
-  font-family: sans-serif;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-size: 10px;
 }
+
+
 
 .container {
   width: 375px;
   height: 812px;
   background-color: white;
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow-y: auto;
   color: black;
   margin: 0 auto;
 }
@@ -42,7 +45,7 @@ nav {
   color: #157efb;
 }
 
-
+/*
 .bus-stops {
   margin: 0 20px;
 }
@@ -57,17 +60,69 @@ nav {
   display: flex;
   align-items: center;
 }
-
+*/
 .bus-stops .label {
   margin-left: 5px;
+  margin-top: 8px;
+  float: left;
 }
+
+
 
 .bus-stops .fa-chevron-left {
   color: #157efb;
+  float: left;
+  margin-left: 5px;
+  margin-top: 7px;
+
 }
 
-.bus-list .fa-chevron-right {
+.bus-arrival .fa-chevron-right {
   color: #b8b8b8;
+
+}
+
+li.bus-route {
+  display: list-item; /* removes default value list-item */
+}
+
+.circle, .bus-info, .bus-content, .bus-arrival {
+  float: left; /* sets all divs as float left */
+}
+
+.bus-info {
+  border-bottom: 1px solid black; /* extra div element specifically for this border */
+}
+
+/* main structural divs need to add up to 100% */
+.circle {
+  width: 14%;
+  height: 50px;
+/*  align-items: center;
+  justify-content: center; */
+  border: 2px solid #157efb;
+  border-radius: 100px;
+  background-color: yellow;
+  margin: 10px;
+  color: #157efb;
+  font-size: 15px;
+text-align: center;
+}
+
+.bus-info {
+  width: 80%;
+}
+
+/* secondary structural elements also need to add up to 100% */
+.bus-content {
+  width: 60%;
+}
+
+.bus-arrival {
+  width: 40%;
+  text-align: right;
+  padding-top: 13px; /* terrible necessity when not using flexbox */
+  height: 80px;
 }
 
 .more {
@@ -77,6 +132,8 @@ nav {
   background-position: center;
   width: 33px;
   height: 33px;
+  float: right;
+  margin-right: 20px;
 }
 
 
@@ -104,13 +161,15 @@ h4 {
   text-align: right;
   font-size: 12px;
   line-height: 15px;
+float: right;
+
 }
 
 h5 {
   font-size: 33px;
   text-align: center;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 /* .arrow {
@@ -119,33 +178,11 @@ h5 {
   margin-right: 15px;
 } */
 
-.bus-info {
-  height: 90px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px #b8b8b8 solid;
-  width: 100%;
-
-}
-
-.bus-route {
-  display: flex;
-  align-items: center;
-  /* margin: 0 5px */
-}
-
-/* .bus-route:before {
-  border-top: 3px solid #666;
-  content: '';
-  display: block;
-  height: 100%;
-  width: 60px;
-}*/
 
 .bus-route:hover {
   background-color: #e3e1e1;
 }
-
+/*
 .circle {
   display: flex;
   align-items: center;
@@ -161,37 +198,31 @@ h5 {
   float: left;
 }
 
-.bus-content {
-  /* display: inline-block; */
-  /* padding: 15px 10px 15px 15px; */
+.bus-content-1 {
+  width: 68%;
+
 }
 
-.bus-list {
-  /* background-color: #E5E2E2; */
-  width: 100%;
-  /* height: 100px; */
+.bus-content-2 {
+  width: 77%;
+
 }
 
+.bus-content-3 {
+  width: 75%;
 
-.bus-arrival ul {
-  display: flex;
-  align-items: center;
-  /* justify-content: flex-end; */
 }
 
-.bus-arrival li:first-child {
-  margin-right: 15px;
+.bus-content-4 {
+  width: 81%;
+
 }
 
+.bus-content-5 {
+  width: 73%;
 
-.bus-arrival {
-  /* width: 50%; */
-  /* display: flex;
-  justify-content: flex-end;
-  align-items: center; */
- }
-
-
+}
+*/
 
 
 a {
