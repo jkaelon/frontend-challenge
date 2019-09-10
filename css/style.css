@@ -72,57 +72,69 @@ nav {
 .bus-stops .fa-chevron-left {
   color: #157efb;
   float: left;
-  margin-left: 5px;
+  margin-left: 16px;
   margin-top: 7px;
 
 }
 
 .bus-arrival .fa-chevron-right {
   color: #b8b8b8;
-
+  display: block;
+  float: left;
 }
 
 li.bus-route {
   display: list-item; /* removes default value list-item */
+  padding-top: 10px;
+}
+
+li.bus-route::after {
+  clear: both;
+  display:  block;
+  content:  '';
 }
 
 .circle, .bus-info, .bus-content, .bus-arrival {
   float: left; /* sets all divs as float left */
 }
 
-.bus-info {
-  border-bottom: 1px solid black; /* extra div element specifically for this border */
-}
-
 /* main structural divs need to add up to 100% */
 .circle {
-  width: 14%;
+  width: 20%;
+}
+
+.circle p {
+  width: 50px;
   height: 50px;
-/*  align-items: center;
-  justify-content: center; */
   border: 2px solid #157efb;
   border-radius: 100px;
   background-color: yellow;
-  margin: 10px;
+  margin: 0 10px 0px 16px;
   color: #157efb;
   font-size: 15px;
-text-align: center;
+  padding-top: 15px;
+  text-align: center;
 }
 
 .bus-info {
   width: 80%;
+  border-bottom: 1px solid black; /* extra div element specifically for this border */
+  padding-bottom: 10px;
+}
+
+.bus-route:last-child .bus-info {
+  border-bottom: 0;
 }
 
 /* secondary structural elements also need to add up to 100% */
 .bus-content {
-  width: 60%;
+  width: 65%;
 }
 
 .bus-arrival {
-  width: 40%;
+  width: 35%;
   text-align: right;
-  padding-top: 13px; /* terrible necessity when not using flexbox */
-  height: 80px;
+  padding-top: 22px; /* terrible necessity when not using flexbox */
 }
 
 .more {
@@ -160,9 +172,10 @@ h4 {
   color: #b8b8b8;
   text-align: right;
   font-size: 12px;
-  line-height: 15px;
-float: right;
-
+  line-height: 19px;
+  float: left;
+  margin-right: 6px;
+  min-width: 73px;
 }
 
 h5 {
