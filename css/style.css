@@ -78,7 +78,7 @@ nav {
 }
 
 .bus-arrival .fa-chevron-right {
-  color: #b8b8b8;
+  color: #8e8e93;
   display: block;
   float: left;
 }
@@ -94,26 +94,41 @@ li.bus-route::after {
   content:  '';
 }
 
-.circle, .bus-info, .bus-content, .bus-arrival {
+.identifier, .bus-info, .bus-content, .bus-arrival {
   float: left; /* sets all divs as float left */
 }
 
 /* main structural divs need to add up to 100% */
-.circle {
+.identifier {
   width: 20%;
 }
 
-.circle p {
+.circle {
+  display: block;
   width: 50px;
   height: 50px;
-  border: 2px solid #157efb;
   border-radius: 100px;
-  background-color: yellow;
+  background-color: #157efb;
   margin: 0 10px 0px 16px;
-  color: #157efb;
+  color: #ffffff;
   font-size: 15px;
-  padding-top: 15px;
+  padding-top: 18px;
   text-align: center;
+}
+
+.reroute .circle {
+  background-color: #ad032b;
+  color: white;
+}
+
+.oos .circle {
+  background-color: #424040;
+  color: white;
+}
+
+.arriving .circle {
+  background-color: #12751a;
+  color: white;
 }
 
 .bus-info {
@@ -165,11 +180,11 @@ h2 {
 h3 {
   font-size: 14px;
   line-height: 20px;
-  color: #b8b8b8;
+  color: #8e8e93;
 }
 
 h4 {
-  color: #b8b8b8;
+  color: #8e8e93;
   text-align: right;
   font-size: 12px;
   line-height: 19px;
